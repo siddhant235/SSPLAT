@@ -48,11 +48,11 @@ class NewsPage extends Component {
           <div id="News-details">
             <div className="News-intern">
                 
-              <h6>{info.author}</h6>
-        <h4>{info.title}</h4>
+              <h6>Author:-{info.author}</h6>
+        <h4>Title:<br/>{info.title}</h4>
 
         <img src={info.urlToImage} alt="imag" style={{height:"300px",width:"300px",marginLeft:"15rem"}}/>
-              <h5>{info.author}</h5>
+              
               <details>
                 <summary>Content :</summary>
                 <p>

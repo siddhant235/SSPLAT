@@ -30,7 +30,7 @@ class navbar extends Component {
     return (
       <React.Fragment>
         <Navbar collapseOnSelect expand="lg" >
-          <Navbar.Brand href="/"><img src="/" alt="logo" style={{height:'50px',width:'50px'}}/>Newzz</Navbar.Brand>
+          <Navbar.Brand href="/" style={{fontSize:"30px",marginLeft:"35rem"}}>NEWZZ PAGE BY 17BEC0431</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
