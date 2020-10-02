@@ -2,7 +2,7 @@ import * as actiontypes from '../actions/actionTypes'
 import {updateObject} from '../utility'
 
 const initalState={
-    news:[],
+    jobs:[],
     loading:false,
     token:null,
     status:'',
@@ -21,7 +21,7 @@ const getnewsFail=(state,action)=>{
 }
 const getnews=(state,action)=>{
 return updateObject(...state,{
-    news:action.getdata,
+    jobs:action.getdata,
     getstatus:action.getstatus
 })
 }

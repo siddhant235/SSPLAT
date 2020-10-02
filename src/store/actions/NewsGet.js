@@ -32,6 +32,7 @@ export const getNews=()=>{
         })
         .catch(err=>{
             dispatch(getnewsFail(err.message))
+            console.log(err.message)
         })
     }
 }
