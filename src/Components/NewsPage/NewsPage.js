@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {WhatsappIcon,WhatsappShareButton,FacebookIcon} from 'react-share'
 import { connect } from "react-redux";
 import axios from 'axios'
 import "./NewsPage.css";
@@ -42,7 +43,6 @@ class NewsPage extends Component {
     let allnews = null;
     console.log(this.state.news)
     
-        console.log(this.props.news)
       allnews = this.state.news.map((info) => {
         return (
           <div id="News-details">
@@ -50,20 +50,13 @@ class NewsPage extends Component {
                 
               <h6>Author:-{info.author}</h6>
         <h4>Title:<br/>{info.title}</h4>
-
+       
         <img src={info.urlToImage} alt="imag" style={{height:"300px",width:"300px",marginLeft:"15rem"}}/>
               
               <details>
                 <summary>Content :</summary>
                 <p>
-                  {info.description.split("\n").map(function (item, key) {
-                    return (
-                      <span key={key}>
-                        {item}
-                        <br />
-                      </span>
-                    );
-                  })}
+                  {info.description}
                 </p>
               </details>
               <a className="read" href={info.url} target="_blank">

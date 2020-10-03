@@ -2,9 +2,8 @@ import * as actiontypes from '../actions/actionTypes'
 import {updateObject} from '../utility'
 
 const initalState={
-    jobs:[],
+    news:[],
     loading:false,
-    token:null,
     status:'',
     getstatus:'',
 }
