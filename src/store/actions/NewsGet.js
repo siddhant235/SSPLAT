@@ -23,7 +23,8 @@ export const getnewsSuccess=(getdata,getstatus)=>{
 export const getNews=()=>{
     return dispatch=>{
         dispatch(getnewstart());
-        axios.get("http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=2ae5d92ef04d41469f239acc1b745e0d")
+        axios.get("http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=2ae5d92ef04d41469f239acc1b745e0d"
+          )
         .then(res=>{
            
             console.log(res.data.articles,res.data.status);

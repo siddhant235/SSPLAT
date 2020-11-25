@@ -16,34 +16,34 @@ class NewsPage extends Component {
         
     }
   componentDidMount() {
-    // this.props.onGetNews();
-    axios.get("http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=2ae5d92ef04d41469f239acc1b745e0d")
-    .then(response=>{
-        const posts=response.data.articles;
-        const updatedPosts=posts.map(post=>{
-            return{
-                ...post,
+    this.props.onGetNews();
+//     axios.get("http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=2ae5d92ef04d41469f239acc1b745e0d")
+//     .then(response=>{
+//         const posts=response.data.articles;
+//         const updatedPosts=posts.map(post=>{
+//             return{
+//                 ...post,
                 
-            }
-        })
-     this.setState({
-         news:updatedPosts
-     })   
-     console.log(response);
+//             }
+//         })
+//      this.setState({
+//          news:updatedPosts
+//      })   
+//      console.log(response);
   
         
-    })
-    .catch(error=>{
-     this.setState({
-         error:true
-     })
- })
+//     })
+//     .catch(error=>{
+//      this.setState({
+//          error:true
+//      })
+//  })
   }
   render() {
     let allnews = null;
-    console.log(this.state.news)
+    console.log(this.props.news)
     
-      allnews = this.state.news.map((info) => {
+      allnews = this.props.news.map((info) => {
         return (
           <div id="News-details">
             <div className="News-intern">

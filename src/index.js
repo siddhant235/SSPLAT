@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 import {createStore,combineReducers,compose,applyMiddleware} from 'redux';
 import {BrowserRouter} from 'react-router-dom'
 import './index.css';
+import * as serviceWorker from './serviceWorker';
 import App from './App';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -25,4 +26,4 @@ const app=(
     </Provider>
 )
 ReactDOM.render(app, document.getElementById('root'));
-
+serviceWorker.unregister();

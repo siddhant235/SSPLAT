@@ -19,8 +19,8 @@ const getnewsFail=(state,action)=>{
   })
 }
 const getnews=(state,action)=>{
-return updateObject(...state,{
-    jobs:action.getdata,
+return updateObject(state,{
+    news:action.getdata,
     getstatus:action.getstatus
 })
 }
